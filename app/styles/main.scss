@@ -1,0 +1,9 @@
+// bower:scss
+// endbower
+
+/* hack para corrigir problema de scroll duplo */
+html body ~ *{
+  float: left;
+  width: 0;
+  height: 0;
+}
