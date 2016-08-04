@@ -1,0 +1,28 @@
+// Defaults
+$percent-default: 100%;
+$unit-default: 0;
+
+// Header
+$header-height: 60px;
+$header-height-space: $header-height;
+
+// // Nav
+$nav-width: 107px;
+$nav-height: calc(#{$percent-default} - #{$header-height});
+// $nav-collapse-width: 43px;
+
+// // Colors
+
+
+// // ############################################### Customize views #####################################################
+
+// // View 1
+// $max-width-view-1: 1000px;
+// $min-width-view-1: 560px;
+
+// // View 2
+// $max-width-view-2: $min-width-view-1;
+// $min-width-view-2: 100px;
+
+// $header-height-view-2: 50px;
+// $header-height-space-view-2: $header-height-view-2;

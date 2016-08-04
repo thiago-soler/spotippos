@@ -1,9 +1,19 @@
 // bower:scss
 // endbower
 
-/* hack para corrigir problema de scroll duplo */
-html body ~ *{
-  float: left;
-  width: 0;
-  height: 0;
-}
+//
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700,400);
+
+// Colors
+@import "themes/colors";
+
+// Bootstrap
+@import "bootstrap/dependencies";
+
+// Mixins
+@import "mixins/blocks";
+@import "mixins/resets";
+
+// Structure
+@import "structure/variables";
+@import "structure/core";

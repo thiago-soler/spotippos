@@ -1,0 +1,91 @@
+body{
+  background-color: $color-gray-1;
+}
+
+.app-section{
+
+  @include flex-block-3();
+
+  height: 100%;
+
+  .app-row {
+
+    @include flex-block-2();
+
+  }
+
+  .app-header {
+
+    @include flex-block-2();
+
+    height: $header-height;
+
+    background-color: $color-blue-2;
+
+    transition: all 0.5s ease-out;
+    
+    .block {
+
+      @include fixed-block-1($percent-default, $header-height, 0, 0);
+
+      @include flex-block-1();
+
+      flex-wrap: nowrap;
+      
+      z-index: 3;
+
+      transition: all 0.5s ease-out;
+
+      .app-logo {
+        
+        @include flex-block-1();
+
+        width: $nav-width;
+        height: $header-height;
+
+        background-color: $color-blue-1;
+
+        justify-content: center;
+      }
+
+    }
+
+  }
+
+  .app-nav {
+
+    @include flex-block-2(0, 0, $nav-width);
+
+    transition: all 0.5s ease-out;
+    
+    .block {
+
+      @include fixed-block-1($nav-width, $nav-height, $header-height-space, 0);
+
+      background-color: $color-blue-3;
+
+      z-index: 2;
+
+      transition: all 0.5s ease-out;
+
+    }
+  
+  }
+
+  .app-article {
+
+    @include flex-block-2(1, 1, 100%);
+
+    transition: all 0.5s ease-out;
+
+    .block {
+
+      @include flex-block-2(0, 0, 100%);
+
+      transition: all 0.5s ease-out;
+
+    }
+
+  } 
+
+}
