@@ -1,0 +1,92 @@
+.tm-box-1{
+	
+	height: 100%;
+
+	@include style-reset-1();
+
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+	background-color: $color-white-four;
+
+	border-radius: 2px;
+
+}
+
+.tm-fieldset-1{
+	
+	@include style-reset-1();
+
+	@include flex-block-3();
+
+	padding: $grid-gutter-width;
+
+	border-bottom: 1px solid $color-gray-2;
+
+	h4{
+
+		@include style-reset-1();
+
+		margin-bottom: 7px;
+	
+		font-size: 16px;
+		line-height: 20px;
+
+		color: $color-brownish-grey;
+	}
+
+	label {
+
+		@include style-reset-1();
+
+		font-size: 12px;
+		line-height: 18px;
+
+		color: $color-warm-grey;
+
+	}
+
+	input {
+
+		font-size: 14px;
+		font-family: 'Open Sans';
+		line-height: 16px;
+
+		border-radius: 2px;
+
+		border-color: $color-gray-5;
+
+		z-index: 2;
+	}
+
+	div[class*="col-"] {
+
+		@include flex-block-1();
+		flex-wrap: wrap;
+
+	}
+
+	.linked{
+
+		position: relative;
+
+		&:before{
+			content: '';
+			width: 90%;
+			height: 1px;
+			position: absolute;
+			left: ($grid-gutter-width /2);
+			bottom: 18px;
+			background-color: $color-pinkish-grey;
+
+			z-index: 1;
+
+
+		}
+		
+		div[class*="col-"] ~ div[class*="col-"]{
+		
+		    align-items: flex-end;
+
+		}
+	}
+
+}

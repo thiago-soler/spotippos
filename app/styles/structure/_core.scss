@@ -20,11 +20,11 @@ body{
 
     height: $header-height;
 
-    background-color: $color-blue-2;
-
     transition: all 0.5s ease-out;
     
     .block {
+
+      background-color: $color-azure;
 
       @include fixed-block-1($percent-default, $header-height, 0, 0);
 
@@ -43,9 +43,32 @@ body{
         width: $nav-width;
         height: $header-height;
 
-        background-color: $color-blue-1;
+        background-color: $color-water-blue;
 
         justify-content: center;
+
+        align-items: center;
+
+        // .icons-logo-vivareal{
+        //   width: 48px;
+        //   height: 38px;
+        // }
+
+      }
+
+      h1 {
+        
+        @include style-reset-1();
+
+        align-self: center;
+        
+        font-size: 24px;
+        line-height: 27px;
+        font-weight: bold;
+
+        color: $color-white-four;
+
+        text-indent: $grid-gutter-width;
       }
 
     }
@@ -62,7 +85,9 @@ body{
 
       @include fixed-block-1($nav-width, $nav-height, $header-height-space, 0);
 
-      background-color: $color-blue-3;
+      background-color: $color-twilight-blue;
+
+      padding: ($grid-gutter-width / 2);
 
       z-index: 2;
 
@@ -72,7 +97,7 @@ body{
   
   }
 
-  .app-article {
+  .app-main {
 
     @include flex-block-2(1, 1, 100%);
 
@@ -80,7 +105,11 @@ body{
 
     .block {
 
-      @include flex-block-2(0, 0, 100%);
+      @include flex-block-4(0, 0, 100%);
+
+      padding: $grid-gutter-width ($grid-gutter-width / 2);
+
+      z-index: 1;
 
       transition: all 0.5s ease-out;
 

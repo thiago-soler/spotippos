@@ -1,0 +1,7 @@
+.grid-gutter-1{
+  padding: $grid-gutter-width !important;
+}
+
+.grid-gutter-2{
+  padding: ($grid-gutter-width !important / 2);
+}

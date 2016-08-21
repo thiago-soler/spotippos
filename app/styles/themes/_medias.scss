@@ -1,0 +1,129 @@
+.tm-media-1{
+
+	@include flex-block-1();
+
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26);
+
+	.galery{
+		
+		height: 224px;
+		@include flex-block-2(0, 0, 300px);
+		position: relative;
+		justify-content:center;
+		align-items: center;
+
+		overflow: hidden;
+
+		img{
+
+			height: 224px;
+				
+		}
+
+		.price{
+			
+			bottom: ($grid-gutter-width / 2);
+			left: ($grid-gutter-width / 2);
+			position: absolute;
+
+			font-size: 23px;
+			line-height: 26px;
+			font-family: 'Open Sans';
+			font-weight: 600;
+
+			color: $color-white-four;
+
+			text-shadow: 1px 1px 0px #555;
+
+		}
+
+	}
+
+	.content{
+
+		@include flex-block-2(1, 1, 100%);
+		flex-direction: column;
+
+		header{
+		
+			@include flex-block-1();
+			flex-wrap: wrap;
+
+			h2{
+				@include style-reset-1();
+				@include flex-block-2();
+
+				padding-top: 10px;
+
+				font-size: 18px;
+				font-weight: 400;
+
+				color: $color-greyish-brown;
+
+			}
+
+			p{
+				@include style-reset-1();
+				@include flex-block-2();
+
+				padding: 10px 0;
+
+				font-size: 14px;
+				font-weight: 400;
+
+				color: $color-warm-grey;
+
+			}
+
+		}
+
+	}
+
+	.box-1{
+
+		// @include flex-block-2(1, 1, 100%);
+		padding: ($grid-gutter-width / 2);
+
+		&.type-1{
+			
+			max-height: 174px;
+			@include flex-block-4(1, 1, 100%);
+
+		}
+
+		&.type-2{
+			
+			height: 50px;
+			background-color: $color-white-three;
+
+			box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+
+		}
+
+	}
+
+	.box-2{
+
+		@include flex-block-1();
+
+		padding: 1px 5px;
+
+		font-size: 13px;
+		font-weight: 700;
+		font-stretch: condensed;
+
+		border-radius: 2px;
+
+		border: solid 1px $color-white-two;
+
+		color: $color-warm-grey-three;
+
+	}
+
+	.details{
+
+		@include style-list-reset();
+
+	}
+
+}
