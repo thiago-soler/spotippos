@@ -6,6 +6,12 @@
   padding: ($grid-gutter-width !important / 2);
 }
 
+.style-reset-1{
+
+	@include style-reset-1();
+
+}
+
 .style-list-reset{
 
 	@include style-list-reset();

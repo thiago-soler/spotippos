@@ -2,7 +2,15 @@
 
 	@include flex-block-1();
 
+	margin-top: $grid-gutter-width;
+
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26);
+
+	&:first-child{
+	
+		margin-top: 0;
+
+	}
 
 	.galery{
 		
@@ -97,7 +105,7 @@
 		&.type-2{
 			
 			@include flex-block-1();
-			height: 50px;
+			min-height: 50px;
 			padding: (($grid-gutter-width / 2) - 3) ($grid-gutter-width / 2);
 
 			background-color: $color-white-three;
@@ -130,6 +138,8 @@
 
 		@include flex-block-2(0, 1, 100%);
 		@include style-list-reset();
+
+		 text-align: center;
 
 		.item{
 

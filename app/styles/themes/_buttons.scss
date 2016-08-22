@@ -20,13 +20,17 @@
 
 	cursor: pointer;
 
+	text-decoration: none;
+
 	&:hover{
 		
-		text-decoration: none;
-		color: $color-white-four;
-
 		opacity: 0.7;
 
+	}
+
+	&:focus, &:active, &:visited, &:hover{
+		text-decoration: none;
+		color: $color-white-four;
 	}
 
 }
@@ -60,11 +64,13 @@
 
 	&:hover{
 		
-		text-decoration: none;
-		color: $color-white-four;
-
 		opacity: 0.7;
 
+	}
+
+	&:focus, &:active, &:visited, &:hover{
+		text-decoration: none;
+		color: $color-white-four;
 	}
 
 	[class*="icons"]{
