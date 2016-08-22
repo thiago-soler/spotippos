@@ -2,6 +2,7 @@ $media-query-size1: 1440px;
 $media-query-size2: 1140px;
 $media-query-size3: 1070px;
 $media-query-size4: 750px;
+$media-query-size5: 570px;
 
 @media screen and (min-width: $media-query-size1) {
 
@@ -110,6 +111,13 @@ $media-query-size4: 750px;
 
 	}
 
+}
+
+@media screen and (max-width: $media-query-size5) {
+
+	.app-section .app-nav{
+		display: none;
+	}
 }
 
 // @media screen and (min-width: 800px) and (max-width: $media-query-size1) {

@@ -1,23 +1,27 @@
 # spotippos
 
-Este projeto foi desenvolvido utilizando [yo angular generator](https://github.com/yeoman/generator-angular).
+Projeto para realização de busca de imóveis desenvolvido com [yo angular generator](https://github.com/yeoman/generator-angular).
 
 ### Tecnologias utilizadas
 
-Yeoman, GruntJs, Karma, Compass, 
+Yeoman, GruntJs, Karma, Compass, Bootstrap, Phantomjs
 
 ## Instalação
 
-Para instalar o projeto é necessário baixar suas dependências. Para isso execute os seguintes comandos para criar os pacotes node e dependências do bower:
+Execute os seguintes comandos para criar os pacotes NodeJS e dependências do BowerJS:
 
-`npm install` e `bower install`, caso o build não instale pode ser possível que esteja faltando dependências globais como npm, karma, compass entre outros.
-
-Caso ocorram erros de instalação que impossibilitar a realização do build favor reportar.
+`npm install` e `bower install`, caso ocorra algum problema com o build verifique se são erros de dependências locais como GruntJS, NodeJS, Karma, PhantomJS entre outros.
 
 ## Build e desenvolvimento
 
-Para gerar uma versão para deploy utilize o comando `grunt build` for building and `grunt serve` for preview.
+Para gerar builds do projeto utilizar o seguinte comando `grunt build`. Caso deseje trabalhar como desenvolvedor, utilize o seguinte comando para subir um servidor local `grunt serve`.
 
 ## Testes
 
-Executar o seguinte comando para realização de testes `grunt test`.
+A aplicação tem cobertura de testes unitários para executar o mesmo utilize o seguinte comando `grunt test` ou `npm test`.
+
+## Aplicação demonstrativa
+
+Um build pode ser visualizado no link que segue:
+
+[Demonstração Spotippos](http://thiago-soler.github.io/spotippos)
