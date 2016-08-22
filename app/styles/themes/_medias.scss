@@ -63,6 +63,8 @@
 			}
 
 			p{
+				max-height: 96px;
+
 				@include style-reset-1();
 				@include flex-block-2();
 
@@ -73,6 +75,8 @@
 
 				color: $color-warm-grey;
 
+				overflow: hidden;
+
 			}
 
 		}
@@ -81,19 +85,21 @@
 
 	.box-1{
 
-		// @include flex-block-2(1, 1, 100%);
-		padding: ($grid-gutter-width / 2);
-
 		&.type-1{
 			
 			max-height: 174px;
 			@include flex-block-4(1, 1, 100%);
 
+			padding: ($grid-gutter-width / 2);
+
 		}
 
 		&.type-2{
 			
+			@include flex-block-1();
 			height: 50px;
+			padding: (($grid-gutter-width / 2) - 3) ($grid-gutter-width / 2);
+
 			background-color: $color-white-three;
 
 			box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1);
@@ -122,8 +128,40 @@
 
 	.details{
 
+		@include flex-block-2(0, 1, 100%);
 		@include style-list-reset();
 
+		.item{
+
+			@include flex-block-1();
+			flex-direction: column;
+		    align-items: center;
+
+			@include style-list-reset();
+
+			padding:0 14px;
+
+			.description{
+				
+				margin-top: 3px;
+
+				font-size: 13px;
+				line-height: 14px;
+				font-weight: 700;
+				color: $color-warm-grey;
+
+			}
+
+			&:first-child{
+				padding-left: 0;
+			}
+
+		}
+
+	}
+
+	.app-btn-1{
+		@include flex-block-2(0, 2, 100%);
 	}
 
 }

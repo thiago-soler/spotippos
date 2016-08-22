@@ -5,3 +5,27 @@
 .grid-gutter-2{
   padding: ($grid-gutter-width !important / 2);
 }
+
+.style-list-reset{
+
+	@include style-list-reset();
+
+}
+
+.flex-block-1{
+
+	@include flex-block-1();
+
+}
+
+.flex-block-2{
+
+	@include flex-block-2();
+	
+}
+
+.flex-block-3{
+
+	@include flex-block-3();
+	
+}
