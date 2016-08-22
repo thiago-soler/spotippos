@@ -78,11 +78,13 @@
       </div>
 
       <div class="col-xs-9">
-          
         <div class="col-xs-12 tm-box-1 grid-gutter-1">
 
           <!-- <article class="tm-media-1" > -->
-          <article class="tm-media-1" ng-repeat="property in properties | filter:{id:propertyId} | filter:{squareMeters:propertyArea} | filter:{beds:propertyBed} | filter:{baths:propertyBath} | range:propertyMinPrice:propertyMaxPrice | limitTo:itemsPerPage as results" >
+          <article class="tm-media-1"
+            ng-repeat="property in filteredItem = ( properties | filter:{id:propertyId} | filter:{squareMeters:propertyArea} | filter:{beds:propertyBed} | filter:{baths:propertyBath}  | orderBy:listConfig.orderByField:listConfig.reverseSort ) | startFrom:(listConfig.currentPage-1)*listConfig.entryLimit | limitTo:listConfig.entryLimit">
+            <!-- <article class="tm-media-1" ng-repeat="property in properties | filter:{id:propertyId} | filter:{squareMeters:propertyArea} | filter:{beds:propertyBed} | filter:{baths:propertyBath}  | limitTo:itemsPerPage as results" > -->
+
             
             <div class="galery">
               <img src="http://resizedimgs.vivareal.com/lDEQXgt10gptzBy68VeyYKu_L3k=/fit-in/480x0/vr.images.sp/6bbf0e58-262b-4d78-8041-7b2bd40cab57.jpg" alt="Exemplo de imóvel">
@@ -136,11 +138,22 @@
               </div>
               
             </div>
-
-          
           </article>
+          
 
-          <article class="tm-media-1" ng-if="results.length === 0 && load === false" >
+          <ul ng-if="filteredItem.length !== 0 && listConfig.load === false" uib-pagination boundary-links="true"
+              total-items="filteredItem.length"
+              max-size="listConfig.maxSize"
+              items-per-page="listConfig.entryLimit"
+              ng-model="listConfig.currentPage"
+              class="pagination-sm pull-right"
+              previous-text="&lsaquo;"
+              next-text="&rsaquo;"
+              first-text="&laquo;"
+              last-text="&raquo;">
+            </ul>
+          
+          <article class="tm-media-1" ng-if="filteredItem.length === 0 && listConfig.load === false" >
           
             <div class="content">
 
@@ -153,7 +166,7 @@
           
           </article>
 
-          <article class="tm-media-1" ng-if="load === true" >
+          <article class="tm-media-1" ng-if="listConfig.load === true" >
           
             <div class="content">
 

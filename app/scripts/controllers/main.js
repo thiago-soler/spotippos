@@ -16,34 +16,30 @@ angular.module('spotipposApp')
       'Karma'
     ];
 
-    $scope.properties = [];
-    $scope.itemsPerPage = 10;
-    $scope.load = true;
+    $scope.listConfig = {
+      reverseSort: true,
+      currentPage: 1,
+      maxSize: 5,
+      entryLimit: 5,
+      orderByField: 'orderBy',
+      load: true
+    };
+
 
     $http({
-		
-		method: 'GET',
-		url: 'http://spotippos.vivareal.com/properties?ax=1&ay=1&bx=1400&by=5'
 
-	}).then(function successCallback(response) {
+      method: 'GET',
+      url: 'http://spotippos.vivareal.com/properties?ax=1&ay=1&bx=1400&by=1000'
 
-		$scope.properties = response.data.properties;
-		$scope.load = false;
-		
+    }).then(function successCallback(response) {
 
-	}, function errorCallback(response) {
-		
+      $scope.properties = response.data.properties;
+      $scope.listConfig.load = false;
 
-	});
 
-	$scope.currentPage = 0;
-    $scope.pageSize = 10;
-    $scope.data = [];
-    $scope.numberOfPages=function(){
-        return Math.ceil($scope.data.length/$scope.pageSize);                
-    }
-    for (var i=0; i<45; i++) {
-        $scope.data.push("Item "+i);
-    }
+    }, function errorCallback(response) {
 
-  });
+
+    });
+
+});

@@ -11,7 +11,9 @@
 angular.module('spotipposApp')
   .filter('currency', function () {
 
-    return function (input, value) {
+    return function (input) {
+
+    	input = input || '';
 
     	var mod = input.length % 3,
     		idx = 0,
@@ -32,7 +34,7 @@ angular.module('spotipposApp')
 				count = true;
 			}
 
-			if (nextDot === 3 || parseInt(idx) === 3 && count === false) {
+			if (nextDot === 3 || (parseInt(idx) % 3) === 0 && count === false && parseInt(idx) > 0) {
 
 				result = result + '.';
 				nextDot = 0;
@@ -42,8 +44,13 @@ angular.module('spotipposApp')
 			result = result + valueSplit[idx];
 
 		}
-    
-		return 'R$ ' + result;
+		
+		if (result !== '') {
+
+			result = 'R$ ' + result;
+		}
+
+		return result;
 
     };
 
